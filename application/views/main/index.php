@@ -4,26 +4,14 @@
 <hr>
 <div class="row">
 
+    <?php foreach($movie as $key => $value) : ?>
     <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="show.html"><img src="assets/img/inter.png" alt="интерстеллар"></a>
-        <div class="film_label"><a href="show.html">Интерстеллар</a></div>
+        <a href="show.html"><img src="<?php echo $value['poster']; ?>" alt="интерстеллар"></a>
+        <div class="film_label"><a href="show.html"><?php echo $value['name']; ?></a></div>
     </div>
+    <?php endforeach ?>
 
-    <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="#"><img src="assets/img/matrix.png" alt="матрица"></a>
-        <div class="film_label"><a href="#">Матрица</a></div>
-    </div>
-
-    <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="#"><img src="assets/img/cloud.png" alt="облачный атлас"></a>
-        <div class="film_label"><a href="#">Облачный атлас</a></div>
-    </div>
-
-    <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="#"><img src="assets/img/max.png" alt="безумный макс"></a>
-        <div class="film_label"><a href="#">Безумный макс</a></div>
-    </div>
-
+    
 
 </div>
 
