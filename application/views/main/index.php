@@ -4,14 +4,16 @@
 <hr>
 <div class="row">
 
-    <?php foreach($movie as $key => $value) : ?>
+    <?php foreach ($movie as $key => $value): ?>
     <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="show.html"><img src="<?php echo $value['poster']; ?>" alt="интерстеллар"></a>
-        <div class="film_label"><a href="show.html"><?php echo $value['name']; ?></a></div>
+        <a href="movies/view/<?php echo $value['slug']; ?>"><img src="<?php echo $value['poster']; ?>" alt="<?php echo $value['name']; ?>"></a>
+        <div class="film_label"><a href="show.html">
+                <?php echo $value['name']; ?>
+            </a></div>
     </div>
     <?php endforeach ?>
 
-    
+
 
 </div>
 
@@ -21,25 +23,14 @@
 <hr>
 <div class="row">
 
+    <?php foreach ($serials as $key => $value): ?>
     <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="#"><img src="assets/img/xfiles.png" alt=""></a>
-        <div class="film_label"><a href="#">Секретные материалы</a></div>
+        <a href="movies/view/<?php echo $value['slug']; ?>"><img src="<?php echo $value['poster']; ?>" alt="<?php echo $value['name']; ?>"></a>
+        <div class="film_label"><a href="show.html">
+                <?php echo $value['name']; ?>
+            </a></div>
     </div>
-
-    <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="#"><img src="assets/img/silicon.png" alt=""></a>
-        <div class="film_label"><a href="#">Кремневая долина</a></div>
-    </div>
-
-    <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="#"><img src="assets/img/dead.png" alt=""></a>
-        <div class="film_label"><a href="#">Ходячие мертвецы</a></div>
-    </div>
-
-    <div class="films_block col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <a href="#"><img src="assets/img/breakingbad.png" alt=""></a>
-        <div class="film_label"><a href="#">Во все тяжкие</a></div>
-    </div>
+    <?php endforeach ?>
 
 </div>
 

@@ -22,7 +22,10 @@ class Main extends MY_Controller
         $this->load->model('films_model');
 
         // переменная со всеми фильмами
-        $this->data['movie'] = $this->films_model->getFilms(false, 4, 1);
+        $this->data['movie'] = $this->films_model->getFilms(false, 8, 1);
+
+        // переменная со всеми сериалами
+        $this->data['serials'] = $this->films_model->getFilms(false, 4, 2);
 
 
         // Подключаем вид страницы

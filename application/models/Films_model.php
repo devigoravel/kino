@@ -45,4 +45,19 @@ class Films_model extends CI_Model
         return $query->result_array();
             
     }
+
+    // Метод для пагинации
+    public function getMoviesOnPage($row_count, $offset, $type = 1)
+    {
+        $query = $this->db
+            // выбираем категорию
+            ->where('category_id', $type)
+            // сортируем
+            ->order_by('add_date', 'desc')
+            // указываем таблицу
+            ->get('movie', $row_count, $offset);
+        
+            return $query->result_array();
+
+    }
 }

@@ -15,11 +15,11 @@ class News extends MY_Controller
 	// Метод отображения всех новостей
 	public function index()
 	{
-		$data['title'] = "Все новости";
-		$data['news'] = $this->news_model->getNews();
+		$this->data['title'] = "Все новости";
+		$this->data['news'] = $this->news_model->getNews();
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('news/index', $data);
+		$this->load->view('templates/header', $this->data);
+		$this->load->view('news/index', $this->data);
 		$this->load->view('templates/footer');
 
 	}

@@ -58,6 +58,17 @@ $route['default_controller'] = 'main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+/**
+ * Роутер для просмотра одного фильма  
+*/
+$route['movies/(:any)'] = 'movies/view/$1';
+
+/**
+ * Роутеры для пагинации
+*/
+$route['movies/type/films'] = 'movies/type/films/$1';
+$route['movies/type/serials'] = 'movies/type/serials/$1';
+
 
 /**
  * Роутеры для контроллера News
